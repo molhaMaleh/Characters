@@ -1,10 +1,29 @@
-<h2>Here are the list of characters: </h2>
-<ul>
-  <li [routerLink]="['/characters', character.id]" *ngFor="let character of characters">
-    <h3> {{character.name}} </h3>
-    <img [src]="character.thumbnail.path + '.' + character.thumbnail.extension" alt={{character.name}} width="100">
-    <p>
-        <span> {{character.description}} </span>
-    </p>
-  </li>
-</ul>
+<div class="w3_content_agilleinfo_inner">
+    <div class="agile_featured_movies">
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" aria-labelledby="home-tab">
+        <div class="agile-news-table">
+          <table>
+            <thead>
+              <tr>
+              <th>ID.</th>
+              <th>Name</th>
+              <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr [routerLink]="['/characters', character.id]" *ngFor="let character of characters" >
+              <td>{{character.id}}</td>
+              <td class="w3-list-img"><img [src]="character.thumbnail.path + '.' + character.thumbnail.extension" alt=""/> <span>{{character.name}}</span></td>
+              <td>{{character.description}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+</div>

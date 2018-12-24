@@ -1,0 +1,54 @@
+/*--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+body a {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+html, body{
+    font-size: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #FFF;
+}
+td.w3-list-img {
+	text-decoration:none;
+}
+td.w3-list-img img {
+    width: 16% !important;
+}
+td.w3-list-img span{
+	color:#000000;
+	font-size:1em;
+	font-weight:600;
+	text-decoration:none;
+	display:block;
+	margin:.5em 0 0 0;
+	    letter-spacing: 1px;
+}
+td.w3-list-info a {
+    color: #424242;
+    text-decoration: none;
+	    letter-spacing: 1px;
+}
+/*-- responsive --*/
+@media(max-width:1080px){
+	td.w3-list-img a img {
+		width: 25% !important;
+	}
+	td.w3-list-img a span {
+		margin: .5em 0 0 0;
+	}
+}
+@media(max-width:640px){
+	td.w3-list-img a span {
+		color: #000000;
+		font-size: 0.8em;
+	}
+}
+/*-- //responsive --*/
