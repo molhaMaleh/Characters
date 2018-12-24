@@ -1,56 +1,131 @@
-<h1>Here are {{character?.name}}</h1>
-<h4>Character id: {{character?.id}}</h4>
-<h2>Comics:</h2>
-<ul>
-  <li *ngFor="let comic of characterComics">
-    <div *ngIf="comic">
-      <h3> {{comic.title}} </h3>
-      <img *ngIf="comic.thumbnail" [src]="comic.thumbnail.path + '.' + comic.thumbnail.extension" width="100">
-      <p>
-          <span> {{comic.description}} </span>
-      </p>
+<div class="w3_content_agilleinfo_inner">
+    <div class="agile_featured_movies">
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+    <div>
+      <h1>Here is {{character?.name}}!</h1>
+      <h4>Character id: {{character?.id}}</h4>
     </div>
-  </li>
-</ul>
-<h2>Events:</h2>
-<ul>
-  <li *ngFor="let event of characterEvents">
-    <div *ngIf="event">
-      <h3> {{event.title}} </h3>
-      <img *ngIf="event.thumbnail" [src]="event.thumbnail.path + '.' + event.thumbnail.extension" width="100">
-      <p>
-          <span> {{event.description}} </span>
-      </p>
+    <h3 class="section-title">Comics</h3>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" aria-labelledby="home-tab">
+        <div class="agile-news-table">
+          <table>
+            <thead>
+              <tr>
+              <th>Title</th>
+              <th>Image</th>
+              <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let comic of characterComics">
+              <td>{{comic.title}}</td>
+              <td class="w3-list-img"><img *ngIf="comic.thumbnail" [src]="comic.thumbnail.path + '.' + comic.thumbnail.extension"/></td>
+              <td>{{comic.description}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  </li>
-</ul>
-<h2>Series:</h2>
-<ul>
-  <li *ngFor="let _series of characterSeries">
-    <div *ngIf="_series">
-      <h3> {{_series.title}} </h3>
-      <img *ngIf="_series.thumbnail" [src]="_series.thumbnail.path + '.' + _series.thumbnail.extension" width="100">
-      <p> {{_series.rating}} </p>
-      <p>
-          <span> {{_series.description}} </span>
-      </p>
-      <p>
-          <span> {{_series.startYear}} </span>
-          <span> {{_series.endYear}} </span>
-      </p>
     </div>
-  </li>
-</ul>
-<h2>Stories:</h2>
-<ul>
-  <li *ngFor="let story of characterStories">
-    <div *ngIf="story">
-      <h3> {{story.title}} </h3>
-      <img *ngIf="story.thumbnail" [src]="story.thumbnail.path + '.' + story.thumbnail.extension" width="100">
-      <p>{{story.type}}</p>
-      <p>
-          <span> {{story.description}} </span>
-      </p>
+</div>
+</div>
+
+<div class="w3_content_agilleinfo_inner">
+    <div class="agile_featured_movies">
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+    <h3 class="section-title">Events</h3>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" aria-labelledby="home-tab">
+        <div class="agile-news-table">
+          <table>
+            <thead>
+              <tr>
+              <th>Title</th>
+              <th>Image</th>
+              <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let event of characterEvents">
+              <td>{{event.title}}</td>
+              <td class="w3-list-img"><img *ngIf="event.thumbnail" [src]="event.thumbnail.path + '.' + event.thumbnail.extension"/></td>
+              <td>{{event.description}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  </li>
-</ul>
+    </div>
+</div>
+</div>
+
+<div class="w3_content_agilleinfo_inner">
+    <div class="agile_featured_movies">
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+    <h3 class="section-title">Series</h3>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" aria-labelledby="home-tab">
+        <div class="agile-news-table">
+          <table>
+            <thead>
+              <tr>
+              <th>Title</th>
+              <th>Image</th>
+              <th>Rating</th>
+              <th>Start Year</th>
+              <th>End Year</th>
+              <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let _series of characterSeries">
+              <td>{{_series.title}}</td>
+              <td class="w3-list-img"><img *ngIf="_series.thumbnail" [src]="_series.thumbnail.path + '.' + _series.thumbnail.extension"/></td>
+              <td><span *ngIf="_series.rating">{{_series.rating}}</span></td>
+              <td>{{_series.startYear}}</td>
+              <td>{{_series.endYear}}</td>
+              <td>{{_series.description}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="w3_content_agilleinfo_inner">
+    <div class="agile_featured_movies">
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+    <h3 class="section-title">Stories</h3>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" aria-labelledby="home-tab">
+        <div class="agile-news-table">
+          <table>
+            <thead>
+              <tr>
+              <th>Title</th>
+              <th>Image</th>
+              <th>Type</th>
+              <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let story of characterStories">
+              <td>{{story.title}}</td>
+              <td class="w3-list-img"><img *ngIf="story.thumbnail" [src]="story.thumbnail.path + '.' + story.thumbnail.extension"/></td>
+              <td><span *ngIf="story.type">{{story.type}}</span></td>
+              <td>{{story.description}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+</div>
